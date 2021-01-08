@@ -9,40 +9,64 @@ the_understanding = Album.create(
   image_url: "/img/the_understanding.jpg"
 )
 the_understanding.songs.create(
-  order_in_album: 1, title: "Triumpant"
+  order_in_album: 1,
+  title_en: "Triumpant",
+  title_fr: "Victorieux"
 )
 the_understanding.songs.create(
-  order_in_album: 2, title: "Only This Moment"
+  order_in_album: 2,
+  title_en: "Only This Moment",
+  title_fr: "Seulement ce moment"
 )
 the_understanding.songs.create(
-  order_in_album: 3, title: "49 Percent"
+  order_in_album: 3,
+  title_en: "49 Percent",
+  title_fr: "49 pour cent"
 )
 the_understanding.songs.create(
-  order_in_album: 4, title: "Sombre Detune"
+  order_in_album: 4,
+  title_en: "Sombre Detune",
+  title_fr: "Sombre Detune"
 )
 the_understanding.songs.create(
-  order_in_album: 5, title: "Follow My Ruin"
+  order_in_album: 5,
+  title_en: "Follow My Ruin",
+  title_fr: "Suivez ma ruine"
 )
 the_understanding.songs.create(
-  order_in_album: 6, title: "Beautiful Day Without You"
+  order_in_album: 6,
+  title_en: "Beautiful Day Without You",
+  title_fr: "Belle journée sans toi"
 )
 the_understanding.songs.create(
-  order_in_album: 7, title: "What Else Is There?"
+  order_in_album: 7,
+  title_en: "What Else Is There?",
+  title_fr: "Qu'y a-t-il d'autre?"
 )
 the_understanding.songs.create(
-  order_in_album: 8, title: "Circuit Breaker"
+  order_in_album: 8,
+  title_en: "Circuit Breaker",
+  title_fr: "Disjoncteur"
 )
 the_understanding.songs.create(
-  order_in_album: 9, title: "Alpha Male"
+  order_in_album: 9,
+  title_en: "Alpha Male",
+  title_fr: "Mâle alpha"
 )
 the_understanding.songs.create(
-  order_in_album: 10, title: "Someone Like Me"
+  order_in_album: 10,
+  title_en: "Someone Like Me",
+  title_fr: "Quelqu'un comme moi"
 )
 the_understanding.songs.create(
-  order_in_album: 11, title: "Dead to the World"
+  order_in_album: 11,
+  title_en: "Dead to the World",
+  title_fr: "Mort au monde"
 )
 the_understanding.songs.create(
-  order_in_album: 12, title: "Tristesse Globale"
+  order_in_album: 12,
+  title_en: "Tristesse Globale",
+  title_fr: "Tristesse Globale"
 )
 
 the_inevitble_end = Album.create(
@@ -50,53 +74,87 @@ the_inevitble_end = Album.create(
   title_fr: "La Fin Inévitable",
   image_url: "/img/the_inevitble_end.jpg")
 the_inevitble_end.songs.create(
-  order_in_album: 1, title: "Skulls"
+  order_in_album: 1,
+  title_en: "Skulls",
+  title_fr: "Crânes",
 )
 the_inevitble_end.songs.create(
-  order_in_album: 2, title: "Monument (T.I.E. Version)"
+  order_in_album: 2,
+  title_en: "Monument (T.I.E. Version)",
+  title_fr: "Monument (version T.I.E.)"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 3, title: "Sordid Affair"
+  order_in_album: 3,
+  title_en: "Sordid Affair",
+  title_fr: "Affaire sordide"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 4, title: "You Know I Have To Go"
+  order_in_album: 4,
+  title_en: "You Know I Have To Go",
+  title_fr: "Tu sais que je dois y aller"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 5, title: "Save Me"
+  order_in_album: 5,
+  title_en: "Save Me",
+  title_fr: "Sauve-moi"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 6, title: "I Had This Thing"
+  order_in_album: 6,
+  title_en: "I Had This Thing",
+  title_fr: "J'ai eu cette chose"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 7, title: "Rong"
+  order_in_album: 7,
+  title_en: "Rong",
+  title_fr: "Rong"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 8, title: "Here She Comes Again"
+  order_in_album: 8,
+  title_en: "Here She Comes Again",
+  title_fr: "Ici, elle revient"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 9, title: "Running To The Sea"
+  order_in_album: 9,
+  title_en: "Running To The Sea",
+  title_fr: "Courir vers la mer"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 10, title: "Compulsion"
+  order_in_album: 10,
+  title_en: "Compulsion",
+  title_fr: "Compulsion"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 11, title: "Coup De Grace"
+  order_in_album: 11,
+  title_en: "Coup De Grace",
+  title_fr: "Coup de grâce"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 12, title: "Thank You"
+  order_in_album: 12,
+  title_en: "Thank You",
+  title_fr: "Je vous remercie"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 13, title: "Do It Again (RYXP Version) (Prologue)"
+  order_in_album: 13,
+  title_en: "Do It Again (RYXP Version) (Prologue)",
+  title_fr: "Faites-le à nouveau (Version RYXP) (Prologue)"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 14, title: "Goodnite Mr. Sweetheart (Prologue)"
+  order_in_album: 14,
+  title_en: "Goodnite Mr. Sweetheart (Prologue)",
+  title_fr: "Bonne nuit M. Sweetheart (Prologue)"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 15, title: "Caramel Afternoon (Prologue)"
+  order_in_album: 15,
+  title_en: "Caramel Afternoon (Prologue)",
+  title_fr: "Après-midi caramel (Prologue)"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 16, title: "Oh No (Prologue)"
+  order_in_album: 16,
+  title_en: "Oh No (Prologue)",
+  title_fr: "Oh non (Prologue)"
 )
 the_inevitble_end.songs.create(
-  order_in_album: 17, title: "Something In My Heart (Prologue)"
+  order_in_album: 17,
+  title_en: "Something In My Heart (Prologue)",
+  title_fr: "Quelque chose dans mon coeur (Prologue)"
 )
