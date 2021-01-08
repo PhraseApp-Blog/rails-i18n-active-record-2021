@@ -2,7 +2,8 @@ Song.destroy_all
 Album.destroy_all
 
 the_understanding = Album.create(
-  title: "The Understanding",
+  title_en: "The Understanding",
+  title_fr: "La compréhension",
   image_url: "/img/the_understanding.jpg"
 )
 the_understanding.songs.create(
@@ -43,7 +44,8 @@ the_understanding.songs.create(
 )
 
 the_inevitble_end = Album.create(
-  title: "The Inevitble End",
+  title_en: "The Inevitble End",
+  title_fr: "La Fin Inévitable",
   image_url: "/img/the_inevitble_end.jpg")
 the_inevitble_end.songs.create(
   order_in_album: 1, title: "Skulls"
