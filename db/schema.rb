@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_01_08_180209) do
 
   create_table "albums", force: :cascade do |t|
+    t.string "review"
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

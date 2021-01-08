@@ -1,0 +1,19 @@
+<h3 class="is-size-6"><%= t(:tracklisting) %></h3>
+
+<table class="table is-narrow is-fullwidth">
+  <thead>
+    <tr>
+      <th><%= t(:number) %></th>
+      <th><%= t(:track) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% album.songs.each do |song| %>
+      <tr>
+        <td><%= song.order_in_album %></td>
+        <td><%= song.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
