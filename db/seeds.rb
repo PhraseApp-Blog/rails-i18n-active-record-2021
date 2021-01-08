@@ -4,7 +4,8 @@ Album.destroy_all
 the_understanding = Album.create(
   title_en: "The Understanding",
   title_fr: "La compréhension",
-  review: "Lush synths, silky builds. This is the first time in a while that a group's gone into the studio and come back doing exactly what I wanted them to.",
+  review_en: "Lush synths, silky builds. This is the first time in a while that a group's gone into the studio and come back doing exactly what I wanted them to.",
+  review_fr: "Synthés luxuriants, constructions soyeuses. C'est la première fois depuis longtemps qu'un groupe entre en studio et revient en faisant exactement ce que je voulais qu'il fasse.",
   image_url: "/img/the_understanding.jpg"
 )
 the_understanding.songs.create(
