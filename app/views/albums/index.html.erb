@@ -1,3 +1,36 @@
 <h1 class="title has-text-centered"><%= t(:app_name) %></h1>
-
 <p class="subtitle has-text-centered"><%= t(:tagline) %></p>
+
+<div class="columns">
+  <% @albums.each do |album| %>
+    <div class="column">
+      <table class="table is-narrow is-fullwidth">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <figure class="image is-square">
+                <img src="<%= album.image_url %>">
+              </figure>
+
+              <h2 class="is-size-5"><%= album.title %></h2>
+            </th>
+          </tr>
+
+          <tr>
+            <th><%= t(:number) %></th>
+            <th><%= t(:track) %></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% album.songs.each do |song| %>
+            <tr>
+              <td><%= song.order_in_album %></td>
+              <td><%= song.title %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>
