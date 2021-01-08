@@ -3,6 +3,7 @@ Album.destroy_all
 
 the_understanding = Album.create(
   title: "The Understanding",
+  review: "Lush synths, silky builds. This is the first time in a while that a group's gone into the studio and come back doing exactly what I wanted them to.",
   image_url: "/img/the_understanding.jpg"
 )
 the_understanding.songs.create(
