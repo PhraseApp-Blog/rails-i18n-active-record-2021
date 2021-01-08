@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_08_124229) do
+ActiveRecord::Schema.define(version: 2021_01_08_191646) do
 
-  create_table "albums", force: :cascade do |t|
+  create_table "album_translations", force: :cascade do |t|
+    t.integer "album_id", null: false
+    t.string "locale"
     t.string "title"
     t.string "review"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["album_id"], name: "index_album_translations_on_album_id"
+  end
+
+  create_table "albums", force: :cascade do |t|
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -29,5 +37,6 @@ ActiveRecord::Schema.define(version: 2021_01_08_124229) do
     t.index ["album_id"], name: "index_songs_on_album_id"
   end
 
+  add_foreign_key "album_translations", "albums"
   add_foreign_key "songs", "albums"
 end

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  album: one
+  locale: MyString
+  title: MyString
+  review: MyString
+
+two:
+  album: two
+  locale: MyString
+  title: MyString
+  review: MyString

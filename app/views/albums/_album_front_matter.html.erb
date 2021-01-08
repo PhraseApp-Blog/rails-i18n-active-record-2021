@@ -2,8 +2,10 @@
   <img src="<%= album.image_url %>">
 </figure>
 
-<h2 class="is-size-5"><%= album.title %></h2>
+<h2 class="is-size-5">
+  <%= album.album_translations.first.title %>
+</h2>
 
 <blockquote style="margin-bottom: 1rem">
-    <%= album.review %>
+    <%= album.album_translations.first.review %>
 </blockquote>
