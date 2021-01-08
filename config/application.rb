@@ -9,5 +9,8 @@ Bundler.require(*Rails.groups)
 module RailsI18nActiveRecord
   class Application < Rails::Application
     config.load_defaults 6.1
+
+    I18n.available_locales = [:en, :fr]
+    I18n.default_locale = :en
   end
 end
