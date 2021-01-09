@@ -4,4 +4,6 @@ class Song < ApplicationRecord
   belongs_to :album
 
   translates :title
+
+  default_scope { includes :current_translation }
 end
