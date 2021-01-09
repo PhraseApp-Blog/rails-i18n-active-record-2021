@@ -13,7 +13,7 @@ class CreateAlbumTranslations < ActiveRecord::Migration[6.1]
       original_title = album.title
       original_review = album.review
 
-      album.album_translations.create(
+      album.translations.create(
         locale: "en",
         title: original_title,
         review: original_review)

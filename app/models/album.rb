@@ -5,5 +5,5 @@ class Album < ApplicationRecord
 
   translates :title, :review
 
-  default_scope { includes :translations }
+  default_scope { includes :current_tranalsation }
 end

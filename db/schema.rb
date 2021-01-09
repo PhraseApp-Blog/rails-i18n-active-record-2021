@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_08_191646) do
+ActiveRecord::Schema.define(version: 2021_01_08_194027) do
 
   create_table "album_translations", force: :cascade do |t|
     t.integer "album_id", null: false
@@ -28,15 +28,24 @@ ActiveRecord::Schema.define(version: 2021_01_08_191646) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "song_translations", force: :cascade do |t|
+    t.integer "song_id", null: false
+    t.string "locale"
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["song_id"], name: "index_song_translations_on_song_id"
+  end
+
   create_table "songs", force: :cascade do |t|
     t.integer "album_id", null: false
     t.integer "order_in_album"
-    t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["album_id"], name: "index_songs_on_album_id"
   end
 
   add_foreign_key "album_translations", "albums"
+  add_foreign_key "song_translations", "songs"
   add_foreign_key "songs", "albums"
 end
