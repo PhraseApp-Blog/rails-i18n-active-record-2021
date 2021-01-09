@@ -5,5 +5,5 @@ class Song < ApplicationRecord
 
   translates :title
 
-  default_scope { includes :current_tranalsation }
+  default_scope { includes :current_translation }
 end

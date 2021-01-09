@@ -4,34 +4,30 @@ module Translatable
   included do
     @translation_model = "#{self}Translation"
 
-    class << self
-      attr_accessor :translatable_attributes
-    end
-
-    def self.translates(*attributes)
-      @translatable_attributes = attributes
-    end
-
     has_many :translations, class_name: @translation_model
 
-    has_one :current_tranalsation,
+    has_one :current_translation,
       -> { where locale: I18n.locale },
       class_name: @translation_model
 
     has_one :default_translation,
       -> { where locale: I18n.default_locale },
       class_name: @translation_model
+
+    def self.translates(*attributes)
+      attributes.each do |attribute|
+        define_method(attribute) do
+          translation_for(attribute)
+        end
+      end
+    end
   end
 
-  def method_missing(method, *args, &block)
-    if self.class.translatable_attributes.include?(method)
-      if current_tranalsation == nil
-        default_translation.send(method)
-      else
-        current_tranalsation.send(method)
-      end
+  def translation_for(attribute)
+    if current_translation == nil
+      default_translation.send(attribute)
     else
-      super(method, *args, &block)
+      current_translation.send(attribute)
     end
   end
 end
