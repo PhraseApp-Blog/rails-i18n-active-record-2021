@@ -2,20 +2,17 @@ module Translatable
   extend ActiveSupport::Concern
 
   included do
-    class << self
-      attr_accessor :translatable_attributes
-    end
-
     def self.translates(*attributes)
-      @translatable_attributes = attributes
+      attributes.each do |attribute|
+        define_method(attribute) do
+          translation_for(attribute)
+        end
+      end
     end
   end
 
-  def method_missing(method, *args, &block)
-    if self.class.translatable_attributes.include?(method)
-      read_attribute("#{method}_#{I18n.locale}")
-    else
-      super(method, *args, &block)
-    end
+  def translation_for(attribute)
+    read_attribute("#{attribute}_#{I18n.locale}") ||
+    read_attribute("#{attribute}_#{I18n.default_locale}")
   end
 end
