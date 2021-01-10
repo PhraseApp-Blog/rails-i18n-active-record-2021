@@ -1,24 +1,32 @@
-# README
+# Scalable Separate Translation Models i18n Solution — Rails Active Record i18n Demo App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To install this app you will need Ruby. You will also need Yarn.
 
-Things you may want to cover:
+From the command line, in the project root directory, run:
 
-* Ruby version
+```bash
+$ bundle
+$ yarn
+$ bin/rails db:migrate
+$ bin/rails db:seed
+```
 
-* System dependencies
+> If you've switched from another branch where you already
+> set up the database, run these commands before `db:migrate`
+> and `db:seed`:
+>
+> ```bash
+> $ rm db/schema.rb
+> $ bin/rails db:reset
+> ```
 
-* Configuration
+That should set you up. Now you can start the dev server.
 
-* Database creation
+```bash
+$ bin/rails db:server
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Visit `localhost:3000` in your browser to see the app. You
+can switch languages via a query param. `localhost:3000/?locale=en`
+loads English content. `localhost:3000/?locale=fr` loads
+French content.
